@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Upload and display image Flask</h1>
+    <form method="POST" enctype="multipart/form-data" action="/show_image">
+        <input type="file" id="File" name="file" accept="*" class="form-control" autocomplete="off">
+        <br><input type="submit" class="btn btn-primary" value="submit">
+    </form>
+{% endblock %}

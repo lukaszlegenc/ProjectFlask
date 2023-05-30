@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Upload and display image Flask</h1>
+    <form method="POST" enctype="multipart/form-data" action="/show_image">
+        <input type="file" id="File" name="file" accept="*" class="form-control" autocomplete="off">
+        <br><input type="submit" class="btn btn-primary" value="submit">
+    </form>
+    <p>Your image was successfully uploaded and displayed below</p>
+    <form action="/predict">
+        <p>To make a prediction click the button: 
+        <button class="btn btn-primary">Predict</button></p>
+    </form>
+    <div>
+        <img src="{{ img }}"/>
+    </div>
+{% endblock %}

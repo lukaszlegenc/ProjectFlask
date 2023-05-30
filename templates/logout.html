@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block userbar %}
+    You are not logged in
+    <form action="/">
+        <input type="submit" class="btn btn-primary" value="Sign in">
+    </form>
+{% endblock%}
+
+{% block content %}
+    <h1>You were successfully logged out of this website</h1>
+{% endblock %}
